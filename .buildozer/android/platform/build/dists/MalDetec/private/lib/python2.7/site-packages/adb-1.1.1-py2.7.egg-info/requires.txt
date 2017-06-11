@@ -1,0 +1,3 @@
+libusb1
+python-gflags
+M2Crypto

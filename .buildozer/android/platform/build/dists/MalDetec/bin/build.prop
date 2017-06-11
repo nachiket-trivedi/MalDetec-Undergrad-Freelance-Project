@@ -1,0 +1,10 @@
+#Last build type
+#Sun, 11 Jun 2017 01:13:27 +0530
+
+build.last.target=debug
+
+build.last.is.instrumented=false
+
+build.last.is.packaging.debug=true
+
+build.last.is.signing.debug=true

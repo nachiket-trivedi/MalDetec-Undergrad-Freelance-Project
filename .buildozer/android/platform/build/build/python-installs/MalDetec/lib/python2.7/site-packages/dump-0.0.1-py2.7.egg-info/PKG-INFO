@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: dump
+Version: 0.0.1
+Summary: Wrapper around psql and pg_dump to make it easier to backup/restore a PostgreSQL database
+Home-page: http://github.com/jaymon/dump
+Author: Jay Marcyes
+Author-email: jay@marcyes.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 2.7
