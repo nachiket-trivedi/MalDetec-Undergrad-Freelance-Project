@@ -36,7 +36,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma seperated e.g. requirements = sqlite3,kivy
-requirements = kivy,python2,dpkt,requests
+requirements = kivy,python2,dpkt,openssl,requests,simplejson,urllib,pyopenssl
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -85,8 +85,8 @@ fullscreen = 0
 #android.presplash_color = #FFFFFF
 
 # (list) Permissions
-#android.permissions = INTERNET
-android.permissions = DUMP
+android.permissions = INTERNET
+#android.permissions = DUMP
 
 # (int) Android API to use
 #android.api = 19

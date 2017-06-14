@@ -21,7 +21,7 @@
 
 # === Variables set by makesetup ===
 
-MODOBJS=          Modules/threadmodule.o  Modules/signalmodule.o  Modules/posixmodule.o  Modules/errnomodule.o  Modules/pwdmodule.o  Modules/_sre.o  Modules/_codecsmodule.o  Modules/zipimport.o  Modules/symtablemodule.o  Modules/arraymodule.o  Modules/cmathmodule.o  Modules/mathmodule.o  Modules/_struct.o  Modules/timemodule.o  Modules/operator.o  Modules/_weakref.o  Modules/_randommodule.o  Modules/_collectionsmodule.o  Modules/itertoolsmodule.o  Modules/stropmodule.o  Modules/_functoolsmodule.o  Modules/_elementtree.o  Modules/datetimemodule.o  Modules/_bisectmodule.o  Modules/fcntlmodule.o  Modules/selectmodule.o  Modules/socketmodule.o  Modules/md5module.o Modules/md5.o  Modules/shamodule.o  Modules/sha256module.o  Modules/sha512module.o  Modules/binascii.o  Modules/parsermodule.o  Modules/cStringIO.o  Modules/cPickle.o  Modules/zlibmodule.o  Modules/xmlparse.o Modules/xmlrole.o Modules/xmltok.o Modules/pyexpat.o  Modules/xxsubtype.o
+MODOBJS=          Modules/threadmodule.o  Modules/signalmodule.o  Modules/_ssl.o  Modules/posixmodule.o  Modules/errnomodule.o  Modules/pwdmodule.o  Modules/_sre.o  Modules/_codecsmodule.o  Modules/zipimport.o  Modules/symtablemodule.o  Modules/arraymodule.o  Modules/cmathmodule.o  Modules/mathmodule.o  Modules/_struct.o  Modules/timemodule.o  Modules/operator.o  Modules/_weakref.o  Modules/_randommodule.o  Modules/_collectionsmodule.o  Modules/itertoolsmodule.o  Modules/stropmodule.o  Modules/_functoolsmodule.o  Modules/_elementtree.o  Modules/datetimemodule.o  Modules/_bisectmodule.o  Modules/fcntlmodule.o  Modules/selectmodule.o  Modules/socketmodule.o  Modules/md5module.o Modules/md5.o  Modules/shamodule.o  Modules/sha256module.o  Modules/sha512module.o  Modules/binascii.o  Modules/parsermodule.o  Modules/cStringIO.o  Modules/cPickle.o  Modules/zlibmodule.o  Modules/xmlparse.o Modules/xmlrole.o Modules/xmltok.o Modules/pyexpat.o  Modules/xxsubtype.o
 MODLIBS=        $(LOCALMODLIBS) $(BASEMODLIBS)
 
 # === Variables set by configure
@@ -68,7 +68,7 @@ CFLAGS=		$(BASECFLAGS) -DANDROID -mandroid -fomit-frame-pointer --sysroot /home/
 # be able to build extension modules using the directories specified in the
 # environment variables
 CPPFLAGS=	-I. -IInclude -I$(srcdir)/Include 
-LDFLAGS=	-lm -L/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/libs_collections/Maldetec/armeabi-v7a
+LDFLAGS=	-lm -L/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/libs_collections/MalDetec/armeabi-v7a
 LDLAST=		
 SGI_ABI=	
 CCSHARED=	-fPIC
@@ -84,7 +84,7 @@ PY_CFLAGS=	$(CFLAGS) $(CPPFLAGS) $(CFLAGSFORSHARED) -DPy_BUILD_CORE
 MACHDEP=	linux4
 
 # Install prefix for architecture-independent files
-prefix=		/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/other_builds/python2/armeabi-v7a/python2/python-install
+prefix=		/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/other_builds/python2-openssl/armeabi-v7a/python2/python-install
 
 # Install prefix for architecture-dependent files
 exec_prefix=	${prefix}
@@ -134,7 +134,7 @@ MACOSX_DEPLOYMENT_TARGET=
 OTHER_LIBTOOL_OPT=
 
 # Environment to run shared python without installed libraries
-RUNSHARED=       LD_LIBRARY_PATH=/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/other_builds/python2/armeabi-v7a/python2:
+RUNSHARED=       LD_LIBRARY_PATH=/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/other_builds/python2-openssl/armeabi-v7a/python2:
 
 # Modes for directories, executables and data files created by the
 # install process.  Default to user-only-writable for all file types.
@@ -143,7 +143,7 @@ EXEMODE=	755
 FILEMODE=	644
 
 # configure script arguments
-CONFIG_ARGS=	 '--host=arm-eabi' '--build=x86_64-linux-gnu' '--prefix=/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/other_builds/python2/armeabi-v7a/python2/python-install' '--enable-shared' '--disable-toolbox-glue' '--disable-framework' 'build_alias=x86_64-linux-gnu' 'host_alias=arm-eabi' 'CC=/usr/bin/ccache arm-linux-androideabi-gcc -DANDROID -mandroid -fomit-frame-pointer --sysroot /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm' 'CFLAGS=-DANDROID -mandroid -fomit-frame-pointer --sysroot /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm -march=armv7-a -mfloat-abi=softfp -mfpu=vfp -mthumb -DNO_MALLINFO' 'LDFLAGS=-lm -L/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/libs_collections/Maldetec/armeabi-v7a'
+CONFIG_ARGS=	 '--host=arm-eabi' '--build=x86_64-linux-gnu' '--prefix=/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/other_builds/python2-openssl/armeabi-v7a/python2/python-install' '--enable-shared' '--disable-toolbox-glue' '--disable-framework' 'build_alias=x86_64-linux-gnu' 'host_alias=arm-eabi' 'CC=/usr/bin/ccache arm-linux-androideabi-gcc -DANDROID -mandroid -fomit-frame-pointer --sysroot /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm' 'CFLAGS=-DANDROID -mandroid -fomit-frame-pointer --sysroot /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm -march=armv7-a -mfloat-abi=softfp -mfpu=vfp -mthumb -DNO_MALLINFO' 'LDFLAGS=-lm -L/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/libs_collections/MalDetec/armeabi-v7a'
 
 
 # Subdirectories with code
@@ -191,7 +191,7 @@ PROFILE_TASK=	$(srcdir)/Tools/pybench/pybench.py -n 2 --with-gc --with-syscheck
 
 # === Definitions added by makesetup ===
 
-LOCALMODLIBS=                                     -L$(exec_prefix)/lib -lz  
+LOCALMODLIBS=    -L$(SSL) -lssl$(OPENSSL_VERSION) -lcrypto$(OPENSSL_VERSION)                                   -L$(exec_prefix)/lib -lz  
 BASEMODLIBS=
 GLHACK=-Dclear=__GLclear
 PYTHONPATH=$(COREPYTHONPATH)
@@ -205,6 +205,7 @@ SITEPATH=
 DESTPATH=
 MACHDESTLIB=$(BINLIBDEST)
 DESTLIB=$(LIBDEST)
+SSL=/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/other_builds/openssl/armeabi-v7a/openssl
 
 
 
@@ -1293,6 +1294,8 @@ Modules/threadmodule.o: $(srcdir)/Modules/threadmodule.c; $(CC) $(PY_CFLAGS)  -c
 Modules/threadmodule$(SO):  Modules/threadmodule.o; $(BLDSHARED)  Modules/threadmodule.o   -o Modules/threadmodule$(SO)
 Modules/signalmodule.o: $(srcdir)/Modules/signalmodule.c; $(CC) $(PY_CFLAGS)  -c $(srcdir)/Modules/signalmodule.c -o Modules/signalmodule.o
 Modules/signalmodule$(SO):  Modules/signalmodule.o; $(BLDSHARED)  Modules/signalmodule.o   -o Modules/signalmodule$(SO)
+Modules/_ssl.o: $(srcdir)/Modules/_ssl.c; $(CC) $(PY_CFLAGS)  -DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl -c $(srcdir)/Modules/_ssl.c -o Modules/_ssl.o
+Modules/_ssl$(SO):  Modules/_ssl.o; $(BLDSHARED)  Modules/_ssl.o  -L$(SSL) -lssl$(OPENSSL_VERSION) -lcrypto$(OPENSSL_VERSION)  -o Modules/_ssl$(SO)
 Modules/posixmodule.o: $(srcdir)/Modules/posixmodule.c; $(CC) $(PY_CFLAGS)  -c $(srcdir)/Modules/posixmodule.c -o Modules/posixmodule.o
 Modules/posixmodule$(SO):  Modules/posixmodule.o; $(BLDSHARED)  Modules/posixmodule.o   -o Modules/posixmodule$(SO)
 Modules/errnomodule.o: $(srcdir)/Modules/errnomodule.c; $(CC) $(PY_CFLAGS)  -c $(srcdir)/Modules/errnomodule.c -o Modules/errnomodule.o

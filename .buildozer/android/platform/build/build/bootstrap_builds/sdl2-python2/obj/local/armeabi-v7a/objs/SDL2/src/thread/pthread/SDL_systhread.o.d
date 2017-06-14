@@ -1,13 +1,13 @@
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/obj/local/armeabi-v7a/objs/SDL2/src/thread/pthread/SDL_systhread.o: \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/SDL_systhread.c \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../SDL_internal.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../dynapi/SDL_dynapi.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../dynapi/SDL_dynapi_overrides.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_config.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_platform.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/begin_code.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/close_code.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_config_android.h \
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/obj/local/armeabi-v7a/objs/SDL2/src/thread/pthread/SDL_systhread.o: \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/SDL_systhread.c \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../SDL_internal.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../dynapi/SDL_dynapi.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../dynapi/SDL_dynapi_overrides.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_config.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_platform.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/begin_code.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/close_code.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_config_android.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/pthread.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/time.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/sys/cdefs.h \
@@ -44,10 +44,10 @@
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/asm-generic/signal.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/asm/sigcontext.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/sched.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_platform.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_thread.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_stdinc.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_config.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_platform.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_thread.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_stdinc.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_config.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/stdio.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/stdlib.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/alloca.h \
@@ -56,47 +56,47 @@
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/inttypes.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/ctype.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/math.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_error.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_atomic.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_mutex.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_hints.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../SDL_thread_c.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../SDL_internal.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../pthread/SDL_systhread_c.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../pthread/../../SDL_internal.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../SDL_error_c.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../.././SDL_internal.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../SDL_systhread.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../SDL_thread_c.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../core/android/SDL_android.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../core/android/../../SDL_internal.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_error.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_atomic.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_mutex.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_hints.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../SDL_thread_c.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../SDL_internal.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../pthread/SDL_systhread_c.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../pthread/../../SDL_internal.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../SDL_error_c.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../.././SDL_internal.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../SDL_systhread.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../SDL_thread_c.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../core/android/SDL_android.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../core/android/../../SDL_internal.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/EGL/eglplatform.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/android/native_window.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/android/rect.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/android/native_window_jni.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/jni.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_rect.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_pixels.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_rwops.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_rwops.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_assert.h
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_rect.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_pixels.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_rwops.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_rwops.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_assert.h
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../SDL_internal.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../SDL_internal.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../dynapi/SDL_dynapi.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../dynapi/SDL_dynapi.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../dynapi/SDL_dynapi_overrides.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../dynapi/SDL_dynapi_overrides.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_config.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_config.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_platform.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_platform.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/begin_code.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/begin_code.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/close_code.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/close_code.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_config_android.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_config_android.h:
 
 /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/pthread.h:
 
@@ -170,13 +170,13 @@
 
 /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/sched.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_platform.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_platform.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_thread.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_thread.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_stdinc.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_stdinc.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_config.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_config.h:
 
 /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/stdio.h:
 
@@ -194,33 +194,33 @@
 
 /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/math.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_error.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_error.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_atomic.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_atomic.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_mutex.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_mutex.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_hints.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_hints.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../SDL_thread_c.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../SDL_thread_c.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../SDL_internal.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../SDL_internal.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../pthread/SDL_systhread_c.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../pthread/SDL_systhread_c.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../pthread/../../SDL_internal.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../pthread/../../SDL_internal.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../SDL_error_c.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../SDL_error_c.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../.././SDL_internal.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../.././SDL_internal.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../SDL_systhread.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../SDL_systhread.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../SDL_thread_c.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../SDL_thread_c.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../core/android/SDL_android.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../core/android/SDL_android.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../core/android/../../SDL_internal.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/src/thread/pthread/../../core/android/../../SDL_internal.h:
 
 /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/EGL/eglplatform.h:
 
@@ -234,12 +234,12 @@
 
 /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/jni.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_rect.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_rect.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_pixels.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_pixels.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_rwops.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_rwops.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_rwops.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_rwops.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_assert.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL/include/SDL_assert.h:

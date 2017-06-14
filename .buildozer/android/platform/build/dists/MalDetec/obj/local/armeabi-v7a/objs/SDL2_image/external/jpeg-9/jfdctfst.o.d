@@ -1,7 +1,7 @@
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/obj/local/armeabi-v7a/objs/SDL2_image/external/jpeg-9/jfdctfst.o: \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jfdctfst.c \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jinclude.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jconfig.h \
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/obj/local/armeabi-v7a/objs/SDL2_image/external/jpeg-9/jfdctfst.o: \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jfdctfst.c \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jinclude.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jconfig.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/stdlib.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/sys/cdefs.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -25,15 +25,15 @@
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/sys/sysmacros.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/memory.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/stdio.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jpeglib.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jmorecfg.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jpegint.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jerror.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jdct.h
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jpeglib.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jmorecfg.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jpegint.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jerror.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jdct.h
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jinclude.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jinclude.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jconfig.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jconfig.h:
 
 /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/stdlib.h:
 
@@ -81,12 +81,12 @@
 
 /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/stdio.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jpeglib.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jpeglib.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jmorecfg.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jmorecfg.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jpegint.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jpegint.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jerror.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jerror.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jdct.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_image/external/jpeg-9/jdct.h:

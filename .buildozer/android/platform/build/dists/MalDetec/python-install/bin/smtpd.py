@@ -1,4 +1,4 @@
-#!/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/other_builds/python2/armeabi-v7a/python2/python-install/bin/python2.7
+#!/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/other_builds/python2-openssl/armeabi-v7a/python2/python-install/bin/python2.7
 """An RFC 2821 smtp proxy.
 
 Usage: %(program)s [options] [localhost:localport [remotehost:remoteport]]

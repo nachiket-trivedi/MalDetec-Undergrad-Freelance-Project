@@ -1,1 +1,4 @@
-# Edit this file for local setup changes
+SSL=/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/other_builds/openssl/armeabi-v7a/openssl
+_ssl _ssl.c \
+  -DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \
+  -L$(SSL) -lssl$(OPENSSL_VERSION) -lcrypto$(OPENSSL_VERSION)

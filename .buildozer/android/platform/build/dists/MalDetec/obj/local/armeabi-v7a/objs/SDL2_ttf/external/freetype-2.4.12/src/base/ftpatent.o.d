@@ -1,12 +1,12 @@
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/obj/local/armeabi-v7a/objs/SDL2_ttf/external/freetype-2.4.12/src/base/ftpatent.o: \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/src/base/ftpatent.c \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/ft2build.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/config/ftheader.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/internal.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/freetype.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/config/ftconfig.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/config/ftoption.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/config/ftstdlib.h \
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/obj/local/armeabi-v7a/objs/SDL2_ttf/external/freetype-2.4.12/src/base/ftpatent.o: \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/src/base/ftpatent.c \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/ft2build.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/config/ftheader.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/internal.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/freetype.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/config/ftconfig.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/config/ftoption.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/config/ftstdlib.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/limits.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/sys/cdefs.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -39,44 +39,44 @@
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/memory.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/setjmp.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/machine/setjmp.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/fttypes.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftsystem.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftimage.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/fterrors.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftmoderr.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/fterrdef.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/tttags.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftobjs.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftrender.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftmodapi.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftglyph.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftsizes.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftlcdfil.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftmemory.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftgloadr.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftdriver.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/autohint.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftserv.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftpic.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftincrem.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftstream.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/services/svsfnt.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/tttables.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/services/svttglyf.h
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/fttypes.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftsystem.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftimage.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/fterrors.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftmoderr.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/fterrdef.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/tttags.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftobjs.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftrender.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftmodapi.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftglyph.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftsizes.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftlcdfil.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftmemory.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftgloadr.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftdriver.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/autohint.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftserv.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftpic.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftincrem.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftstream.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/services/svsfnt.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/tttables.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/services/svttglyf.h
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/ft2build.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/ft2build.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/config/ftheader.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/config/ftheader.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/internal.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/internal.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/freetype.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/freetype.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/config/ftconfig.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/config/ftconfig.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/config/ftoption.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/config/ftoption.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/config/ftstdlib.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/config/ftstdlib.h:
 
 /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/limits.h:
 
@@ -142,50 +142,50 @@
 
 /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/machine/setjmp.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/fttypes.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/fttypes.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftsystem.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftsystem.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftimage.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftimage.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/fterrors.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/fterrors.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftmoderr.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftmoderr.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/fterrdef.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/fterrdef.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/tttags.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/tttags.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftobjs.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftobjs.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftrender.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftrender.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftmodapi.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftmodapi.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftglyph.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftglyph.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftsizes.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftsizes.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftlcdfil.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftlcdfil.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftmemory.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftmemory.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftgloadr.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftgloadr.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftdriver.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftdriver.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/autohint.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/autohint.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftserv.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftserv.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftpic.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftpic.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftincrem.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/ftincrem.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftstream.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/ftstream.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/services/svsfnt.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/services/svsfnt.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/tttables.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/tttables.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/services/svttglyf.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/include/freetype/internal/services/svttglyf.h:

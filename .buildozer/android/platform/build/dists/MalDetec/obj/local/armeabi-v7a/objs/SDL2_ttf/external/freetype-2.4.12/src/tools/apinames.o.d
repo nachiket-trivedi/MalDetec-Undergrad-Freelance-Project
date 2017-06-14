@@ -1,5 +1,5 @@
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/obj/local/armeabi-v7a/objs/SDL2_ttf/external/freetype-2.4.12/src/tools/apinames.o: \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/src/tools/apinames.c \
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/obj/local/armeabi-v7a/objs/SDL2_ttf/external/freetype-2.4.12/src/tools/apinames.o: \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_ttf/external/freetype-2.4.12/src/tools/apinames.c \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/stdio.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/sys/cdefs.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h \

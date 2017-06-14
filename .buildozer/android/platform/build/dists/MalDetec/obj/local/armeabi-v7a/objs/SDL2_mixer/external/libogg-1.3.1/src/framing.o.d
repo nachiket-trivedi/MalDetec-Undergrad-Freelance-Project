@@ -1,5 +1,5 @@
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/obj/local/armeabi-v7a/objs/SDL2_mixer/external/libogg-1.3.1/src/framing.o: \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_mixer/external/libogg-1.3.1/src/framing.c \
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/obj/local/armeabi-v7a/objs/SDL2_mixer/external/libogg-1.3.1/src/framing.o: \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_mixer/external/libogg-1.3.1/src/framing.c \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/stdlib.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/sys/cdefs.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -29,9 +29,9 @@
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/machine/limits.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/sys/syslimits.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/asm/page.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_mixer/external/libogg-1.3.1/include/ogg/ogg.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_mixer/external/libogg-1.3.1/include/ogg/os_types.h \
- /home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_mixer/external/libogg-1.3.1/include/ogg/config_types.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_mixer/external/libogg-1.3.1/include/ogg/ogg.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_mixer/external/libogg-1.3.1/include/ogg/os_types.h \
+ /home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_mixer/external/libogg-1.3.1/include/ogg/config_types.h \
  /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/inttypes.h
 
 /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/stdlib.h:
@@ -92,10 +92,10 @@
 
 /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/asm/page.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_mixer/external/libogg-1.3.1/include/ogg/ogg.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_mixer/external/libogg-1.3.1/include/ogg/ogg.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_mixer/external/libogg-1.3.1/include/ogg/os_types.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_mixer/external/libogg-1.3.1/include/ogg/os_types.h:
 
-/home/nachiket/Desktop/Maldetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_mixer/external/libogg-1.3.1/include/ogg/config_types.h:
+/home/nachiket/Desktop/MalDetec/.buildozer/android/platform/build/build/bootstrap_builds/sdl2-python2/jni/SDL2_mixer/external/libogg-1.3.1/include/ogg/config_types.h:
 
 /home/nachiket/.buildozer/android/platform/android-ndk-r9c/platforms/android-19/arch-arm/usr/include/inttypes.h:

@@ -1,3 +1,4 @@
+# coding=utf-8
 from kivy.app import App
 from kivy.uix.button import Button
 from kivy.uix.label import Label
@@ -13,6 +14,9 @@ import urllib2
 import simplejson
 import sys
 import requests
+import httplib
+import ssl
+import urlparse
 
 class MalDetec(App):
 
@@ -216,79 +220,77 @@ class MalDetec(App):
 
     def scan(self):
         f=open('/storage/emulated/0/MalDetec/s3_final.txt','r')
-        #f=open('/home/nachiket/Desktop/Research_work/my_project/Static_url_scanning/s3_final.txt','r')
         scan_final=open('/storage/emulated/0/MalDetec/scan_final.txt','w')
-        #scan_final=open('/home/nachiket/Desktop/scan_final.txt','w')
         count=1
         for lines in f.readlines():
-            scan_final.write(str(lines))
+            scan_final.write("\n"+str(lPointer)+"\n")
             if count<=lPointer:
                 count=count+1
-                scan_final.write(str(lPointer)+"\n")
                 continue
             else:
-                count=1000
-                scan_final.write(str(lPointer)+"***\n")
+                count=10000
             words=lines.split()
             if len(words)==2 and words[0]=='url:':
                 global lPointer
                 global Api_Key
                 lPointer=lPointer+5
-                scan_final.write(str(words[1])+" === "+str(lPointer)+"\n")
                 get_link=str(words[1])
+                # s=get_link
+                # if isinstance(s, unicode):
+                #     s = s.encode(charset, 'ignore')
+                # scheme, netloc, path, qs, anchor = urlparse.urlsplit(s)
+                # path = urllib.quote(path, '/%')
+                # qs = urllib.quote_plus(qs, ':&=')
+                # get_link=urlparse.urlunsplit((scheme, netloc, path, qs, anchor))
                 url = "https://www.virustotal.com/vtapi/v2/url/report"
                 parameters = {"resource": get_link,"apikey": Api_Key}
                 data = urllib.urlencode(parameters)
-                scan_final.write("1")
-                # proxy = urllib2.ProxyHandler({'https': 'http://proxy:port'})
-                # opener = urllib2.build_opener(proxy)
-                # urllib2.install_opener(opener)
-                hdr = {'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8','User-Agent': 'Mozilla/5.0'}
-                req = urllib2.Request(url,data,headers=hdr)
-                scan_final.write("2")
-                scan_final.write(str(req))
+                req = urllib2.Request(url,data)
+                scan_final.write("\n"+str(get_link)+"\n")
+                #os.environ['http_proxy']=''
                 try:
-                    response = urllib2.urlopen(req)
-                    scan_final.write("2.6")
-                except:# urllib2.HTTPError, e:
-                    scan_final.write("2.5")
-                    #scan_final.write(str(e.fp.read()))
-                scan_final.write("3")
-                scan_final.write(str(response))
-
-                # hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
-                # 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-                # 'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
-                # 'Accept-Encoding': 'none',
-                # 'Accept-Language': 'en-US,en;q=0.8',
-                # 'Connection': 'keep-alive'}
-                # params = {'apikey': Api_Key, 'url':'http://www.virustotal.com'}
-                # response = requests.post('https://www.virustotal.com/vtapi/v2/url/report',params=params,headers=hdr)
-                # scan_final.write("3")
-                # json_response = response.json()
-
-                scan_final.write("6")
+                    response = urllib2.urlopen(req,timeout=100)
+                    #scan_final.write("a")
+                except urllib2.HTTPError, e:
+                    scan_final.write("b")
+                    continue
+                except urllib2.URLError, e:
+                    scan_final.write("c ")
+                    scan_final.write(str(e.reason))
+                    continue
+                except urllib2.HTTPException, e:
+                    scan_final.write("d")
+                    continue
+                except:
+                    scan_final.write(" oops ")
+                    continue
+                scan_final.write("\njson\n")
                 json = response.read()
-                scan_final.write("7")
+                # if json==None:
+                #     scan_final.write("@@@@@@@")
+                #     continue
+                #scan_final.write(str(json))
                 response_dict = simplejson.loads(json)
-                scan_final.write("8")
                 scan_id = response_dict.get("scan_id")
-                scan_final.write("9")
+                #scan_final.write("\nsc_id"+scan_id+"\n")
                 link = response_dict.get("url")
-                scan_final.write("|Link: "+link)
                 response_code = response_dict.get("response_code")
+                #scan_final.write("\nrcode"+response_code+"\n")
+                if response_code==0:
+                    scan_final.write("\nRESPONSE_CODE_0)\n")
+                    continue
                 scan_date = response_dict.get("scan_date")
                 analysis = response_dict.get("permalink")
                 Positives = response_dict.get("positives")
                 total = response_dict.get("total")
                 if response_code==1:
-                    scan_final.write("|Link: "+link)
-                    scan_final.write("|Scan Date: "+scan_date)
-                    scan_final.write("|Scan report url: "+analysis)
-                    scan_final.write("|Scanner: "+str(total)+ " Scanner.")
-                    scan_final.write("|Positives: "+str(Positives))
+                    scan_final.write("\nLink: "+link)
+                    scan_final.write("\nScan Date: "+scan_date)
+                    scan_final.write("\nScan report url: "+analysis)
+                    scan_final.write("\nScanner: "+str(total)+ " Scanner.")
+                    scan_final.write("\nPositives: "+str(Positives))
                     scan_final.write("\n")
-                time.sleep(3)
+                    time.sleep(8)
         f.close()
         scan_final.close()
 

@@ -1,1 +1,3 @@
-urllib2
+dpkt
+simplejson
+urllib
