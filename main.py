@@ -23,18 +23,24 @@ class MalDetec(App):
     def main(self, event):
         self.label.text = "Process Started!"
         if not os.path.exists('/storage/emulated/0/MalDetec'):
-            os.makedirs('/storage/emulated/0/MalDetec/files/dump')
             os.makedirs('/storage/emulated/0/MalDetec/db')
+            os.makedirs('/storage/emulated/0/MalDetec/files/dump')
             hd=open('/storage/emulated/0/MalDetec/db/hotdata.txt','w')
             hd.close()
         else:
-            shutil.rmtree('/storage/emulated/0/MalDetec/files', ignore_errors=False, onerror=None)
-            os.makedirs('/storage/emulated/0/MalDetec/files/dump')
+            if os.path.exists('/storage/emulated/0/MalDetec/files'):
+                shutil.rmtree('/storage/emulated/0/MalDetec/files', ignore_errors=False, onerror=None)
+                os.makedirs('/storage/emulated/0/MalDetec/files/dump')
+            else:
+                os.makedirs('/storage/emulated/0/MalDetec/files/dump')
             if not os.path.exists('/storage/emulated/0/MalDetec/db'):
                 os.makedirs('/storage/emulated/0/MalDetec/db')
                 hd=open('/storage/emulated/0/MalDetec/db/hotdata.txt','w')
                 hd.close()
-
+        hd1=open('/storage/emulated/0/MalDetec/db/scan_result.txt','w')
+        hd1.close()
+        hd1=open('/storage/emulated/0/MalDetec/db/forlaterscan_final.txt','w')
+        hd1.close()
         fork1=os.fork()
         if fork1==0:
             global Api_Key
@@ -61,8 +67,10 @@ class MalDetec(App):
                 for i in range(1,1000):
                     self.merging_lookDB()
                     time.sleep(3)
-            elif fork4>0:
-                time.sleep(0.1)
+            fork5=os.fork()
+            if fork5==0:
+                time.sleep(180)
+                self.scan()
 
     def build(self):
         layout = BoxLayout(orientation='vertical')
@@ -79,8 +87,14 @@ class MalDetec(App):
         layout.add_widget(self.label)
         return layout
 
+    def close(self):
+        App.get_running_app().stop()
+
     def stop(self, event):
-        self.label.text = "Wowww!"
+        self.label.text = "Closing App..."
+        st=os.fork()
+        if st==0:
+            self.close()
 
     def n1(self):
         tLast=0
@@ -224,7 +238,7 @@ class MalDetec(App):
         hdata=open('/storage/emulated/0/MalDetec/db/hotdata.txt','r')
         s3_final=open('/storage/emulated/0/MalDetec/files/s3_final.txt','r')
         fls_temp=open('/storage/emulated/0/MalDetec/db/forlaterscan_temp.txt','w')
-        global s3counter
+        #global s3counter
         i=0
         app=" "
         url=" "
@@ -240,8 +254,9 @@ class MalDetec(App):
                 found=0
                 for liness in hdata.readlines():
                     word=liness.split()
-                    if word[0]==url:
+                    if len(word)==2 and str(word[0])==str(url):
                         found=1#notify-app with its url and positives
+                        break
                 if found==0:
                     fls_temp.write(str(app)+" "+str(url)+"\n\n")
         s3counter=i
@@ -259,54 +274,70 @@ class MalDetec(App):
         f=open('/storage/emulated/0/MalDetec/db/forlaterscan_final.txt','r')
         scan_result=open('/storage/emulated/0/MalDetec/db/scan_result.txt','a')
         hdata=open('/storage/emulated/0/MalDetec/db/hotdata.txt','a')
-        global Api_Key
         global fcounter
         i=0
+        scan_result.write("cool"+"\n")
+        app=" "
+        get_link=" "
         for lines in f.readlines():
+            global Api_Key
+            Api_Key = "17c467e4ef26c07369d5c021afbdba97de192970c2f559632d29acd6a3c23ed5"
+            scan_result.write("\n"+"hey"+"\n")
+            scan_result.write("\n--"+str(lines)+"\n")
             i=i+1
-            if i<=fcounter:
+            if int(i)<=int(fcounter):
                 continue
             words=lines.split()
             if len(words)==2:
-                global Api_Key
+                scan_result.write("yolo"+"\n")
                 app=str(words[0])
-                get_link=str(words[1])
+                scan_result.write("\n"+"1 "+app)
+                get_link=str(words[1]).strip()
+                #get_link="http://"+get_link
+                scan_result.write("\n"+"2 "+get_link)
                 url = "https://www.virustotal.com/vtapi/v2/url/report"
+                scan_result.write("\n"+"3")
                 parameters = {"resource": get_link,"apikey": Api_Key}
+                scan_result.write("\n"+"4")
                 data = urllib.urlencode(parameters)
+                scan_result.write("\n"+"5")
                 req = urllib2.Request(url,data)
-                scan_result.write("\n"+str(get_link)+"\n")
+                scan_result.write("\n"+"6")
                 try:
-                    response = urllib2.urlopen(req,timeout=3)
+                    response = urllib2.urlopen(req)
+                    scan_result.write("\n"+"a")
                 except urllib2.HTTPError, e:
-                    scan_result.write("b")
+                    scan_result.write("\n"+"b")
                     continue
                 except urllib2.URLError, e:
-                    scan_result.write("c ")
+                    scan_result.write("\n"+"c ")
                     scan_result.write(str(e.reason))
                     continue
                 except urllib2.HTTPException, e:
-                    scan_result.write("d")
+                    scan_result.write("\n"+"d")
                     continue
-                except:
-                    scan_result.write(" oops ")
+                except Exception:
+                    scan_result.write("\n"+" oops ")
                     continue
                 json = response.read()
-                #scan_result.write(str(json))
+                if json is None:
+                    scan_result.write("\n"+" yo json failed ")
+                    continue
+                scan_result.write("\n"+"js ")#+str(json))
                 response_dict = simplejson.loads(json)
                 scan_id = response_dict.get("scan_id")
-                #scan_result.write("\nsc_id"+scan_id+"\n")
+                scan_result.write("\n"+"sc_id ")#+str(scan_id)+"\n")
                 link = response_dict.get("url")
                 response_code = response_dict.get("response_code")
-                #scan_result.write("\nrcode"+response_code+"\n")
+                scan_result.write("\n"+"rcode ")#+str(response_code)+"\n")
                 if response_code==0:
-                    scan_result.write("\nRESPONSE_CODE_0)\n")
+                    scan_result.write("\n"+"RESPONSE_CODE_0"+"\n")
                     continue
                 scan_date = response_dict.get("scan_date")
                 analysis = response_dict.get("permalink")
                 Positives = response_dict.get("positives")
                 total = response_dict.get("total")
-                time.sleep(12)
+                time.sleep(15)
                 if response_code==1:
                     hdata.write(str(get_link)+" "+str(Positives)+"\n\n")
                     #notify- app with url and positives
@@ -321,92 +352,92 @@ class MalDetec(App):
         hdata.close()
         fcounter=i
 
-    def scandummy(self):
-        f=open('/storage/emulated/0/MalDetec/db/forlaterscan.txt','r')
-        scan_result=open('/storage/emulated/0/MalDetec/db/scan_result.txt','w')
-        #hdata=open('/storage/emulated/0/MalDetec/db/hotdata.txt','w')
-        count=1
-        global lPointer
-        global Api_Key
-        for lines in f.readlines():
-            scan_result.write("\n"+str(lPointer)+"\n")
-            if count<=lPointer:
-                count=count+1
-                continue
-            else:
-                count=10000
-            words=lines.split()
-            if len(words)==2 and words[0]=='url:':
-                global lPointer
-                global Api_Key
-                lPointer=lPointer+5
-                get_link=str(words[1])
-                if get_link in ulist:
-                    self.label.text = scanResult[get_link]
-                # s=get_link
-                # if isinstance(s, unicode):
-                #     s = s.encode(charset, 'ignore')
-                # scheme, netloc, path, qs, anchor = urlparse.urlsplit(s)
-                # path = urllib.quote(path, '/%')
-                # qs = urllib.quote_plus(qs, ':&=')
-                # get_link=urlparse.urlunsplit((scheme, netloc, path, qs, anchor))
-                url = "https://www.virustotal.com/vtapi/v2/url/report"
-                parameters = {"resource": get_link,"apikey": Api_Key}
-                data = urllib.urlencode(parameters)
-                req = urllib2.Request(url,data)
-                scan_result.write("\n"+str(get_link)+"\n")
-                #os.environ['http_proxy']=''
-                try:
-                    response = urllib2.urlopen(req,timeout=3)
-                    #scan_result.write("a")
-                except urllib2.HTTPError, e:
-                    scan_result.write("b")
-                    continue
-                except urllib2.URLError, e:
-                    scan_result.write("c ")
-                    scan_result.write(str(e.reason))
-                    continue
-                except urllib2.HTTPException, e:
-                    scan_result.write("d")
-                    continue
-                except:
-                    scan_result.write(" oops ")
-                    continue
-                json = response.read()
-                # if json==None:
-                #     scan_result.write("@@@@@@@")
-                #     continue
-                scan_result.write(str(json))
-                response_dict = simplejson.loads(json)
-                scan_id = response_dict.get("scan_id")
-                #scan_result.write("\nsc_id"+scan_id+"\n")
-                link = response_dict.get("url")
-                response_code = response_dict.get("response_code")
-                #scan_result.write("\nrcode"+response_code+"\n")
-                if response_code==0:
-                    scan_result.write("\nRESPONSE_CODE_0)\n")
-                    continue
-                scan_date = response_dict.get("scan_date")
-                analysis = response_dict.get("permalink")
-                Positives = response_dict.get("positives")
-                total = response_dict.get("total")
-                time.sleep(12)
-                if response_code==1:
-                    ulist.add(str(get_link))
-                    scanResult[get_link]="Positives: "+str(Positives)
-                    scan_result.write("\nLink: "+link)
-                    scan_result.write("\nScan Date: "+scan_date)
-                    scan_result.write("\nScan report url: "+analysis)
-                    scan_result.write("\nScanner: "+str(total)+ " Scanner.")
-                    scan_result.write("\nPositives: "+str(Positives))
-                    scan_result.write("\n")
-                    for items in ulist:
-                        scan_result.write("\n% "+str(items))
-        for items in ulist:
-            scan_result.write("\n$ "+str(items))
-        for items in ulist:
-            scan_result.write("\n@ "+str(items)+" "+str(scanResult[items]))
-        f.close()
-        scan_result.close()
+    # def scandummy(self):
+    #     f=open('/storage/emulated/0/MalDetec/db/forlaterscan.txt','r')
+    #     scan_result=open('/storage/emulated/0/MalDetec/db/scan_result.txt','w')
+    #     #hdata=open('/storage/emulated/0/MalDetec/db/hotdata.txt','w')
+    #     count=1
+    #     global lPointer
+    #     global Api_Key
+    #     for lines in f.readlines():
+    #         scan_result.write("\n"+str(lPointer)+"\n")
+    #         if count<=lPointer:
+    #             count=count+1
+    #             continue
+    #         else:
+    #             count=10000
+    #         words=lines.split()
+    #         if len(words)==2 and words[0]=='url:':
+    #             global lPointer
+    #             global Api_Key
+    #             lPointer=lPointer+5
+    #             get_link=str(words[1])
+    #             if get_link in ulist:
+    #                 self.label.text = scanResult[get_link]
+    #             # s=get_link
+    #             # if isinstance(s, unicode):
+    #             #     s = s.encode(charset, 'ignore')
+    #             # scheme, netloc, path, qs, anchor = urlparse.urlsplit(s)
+    #             # path = urllib.quote(path, '/%')
+    #             # qs = urllib.quote_plus(qs, ':&=')
+    #             # get_link=urlparse.urlunsplit((scheme, netloc, path, qs, anchor))
+    #             url = "https://www.virustotal.com/vtapi/v2/url/report"
+    #             parameters = {"resource": get_link,"apikey": Api_Key}
+    #             data = urllib.urlencode(parameters)
+    #             req = urllib2.Request(url,data)
+    #             scan_result.write("\n"+str(get_link)+"\n")
+    #             #os.environ['http_proxy']=''
+    #             try:
+    #                 response = urllib2.urlopen(req,timeout=3)
+    #                 #scan_result.write("a")
+    #             except urllib2.HTTPError, e:
+    #                 scan_result.write("b")
+    #                 continue
+    #             except urllib2.URLError, e:
+    #                 scan_result.write("c ")
+    #                 scan_result.write(str(e.reason))
+    #                 continue
+    #             except urllib2.HTTPException, e:
+    #                 scan_result.write("d")
+    #                 continue
+    #             except:
+    #                 scan_result.write(" oops ")
+    #                 continue
+    #             json = response.read()
+    #             # if json==None:
+    #             #     scan_result.write("@@@@@@@")
+    #             #     continue
+    #             scan_result.write(str(json))
+    #             response_dict = simplejson.loads(json)
+    #             scan_id = response_dict.get("scan_id")
+    #             #scan_result.write("\nsc_id"+scan_id+"\n")
+    #             link = response_dict.get("url")
+    #             response_code = response_dict.get("response_code")
+    #             #scan_result.write("\nrcode"+response_code+"\n")
+    #             if response_code==0:
+    #                 scan_result.write("\nRESPONSE_CODE_0)\n")
+    #                 continue
+    #             scan_date = response_dict.get("scan_date")
+    #             analysis = response_dict.get("permalink")
+    #             Positives = response_dict.get("positives")
+    #             total = response_dict.get("total")
+    #             time.sleep(12)
+    #             if response_code==1:
+    #                 ulist.add(str(get_link))
+    #                 scanResult[get_link]="Positives: "+str(Positives)
+    #                 scan_result.write("\nLink: "+link)
+    #                 scan_result.write("\nScan Date: "+scan_date)
+    #                 scan_result.write("\nScan report url: "+analysis)
+    #                 scan_result.write("\nScanner: "+str(total)+ " Scanner.")
+    #                 scan_result.write("\nPositives: "+str(Positives))
+    #                 scan_result.write("\n")
+    #                 for items in ulist:
+    #                     scan_result.write("\n% "+str(items))
+    #     for items in ulist:
+    #         scan_result.write("\n$ "+str(items))
+    #     for items in ulist:
+    #         scan_result.write("\n@ "+str(items)+" "+str(scanResult[items]))
+    #     f.close()
+    #     scan_result.close()
 
 MalDetec().run()
