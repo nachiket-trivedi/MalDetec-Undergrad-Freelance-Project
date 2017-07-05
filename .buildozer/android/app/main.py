@@ -3,7 +3,9 @@ from kivy.app import App
 from kivy.uix.button import Button
 from kivy.uix.label import Label
 from kivy.uix.boxlayout import BoxLayout
+from plyer import notification
 import dpkt
+import plyer
 import subprocess
 import os
 import shutil
@@ -91,10 +93,8 @@ class MalDetec(App):
         App.get_running_app().stop()
 
     def stop(self, event):
-        self.label.text = "Closing App..."
-        st=os.fork()
-        if st==0:
-            self.close()
+        notification.notify('title','msg')
+        #notification.notify(title="Kivy Notification",message="Plyer Up and Running!",app_name="MalDetec",app_icon="plyer-icon.ico",timeout=10,ticker="Hello")
 
     def n1(self):
         tLast=0
@@ -184,9 +184,15 @@ class MalDetec(App):
                             list=word.split(":")
                             s2_final.write(list[1])
                             s2_final.write(" ")
-                        elif d==8:#here uid to app name conversion is to be done
-                			s2_final.write(word+"\n")
-                			break
+                        elif d==8:
+                            wrd=os.popen("cat /storage/emulated/0/MalDetec/uid_pkg_map.txt | grep -A1 userId='%s'"%word).read()
+                            wrd1=wrd.split("\n")
+                            p=str(wrd1[1])
+                            p=p[8:-2]
+                            p=p.split()[1]
+                            s2_final.write(str(p))
+                            s2_final.write("\n")
+                            break
                 f.close()
             s2_final.close()
 
@@ -321,6 +327,7 @@ class MalDetec(App):
                     continue
                 json = response.read()
                 if json is None:
+                    scan_result.write("\n"+" yo json failed ")
                     continue
                 scan_result.write("\n"+"js ")#+str(json))
                 response_dict = simplejson.loads(json)

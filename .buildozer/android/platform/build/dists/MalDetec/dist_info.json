@@ -1,1 +1,1 @@
-{"recipes": ["hostpython2", "openssl", "sdl2_image", "sdl2_mixer", "sdl2_ttf", "python2", "sdl2", "setuptools", "six", "pyjnius", "pyopenssl", "requests", "kivy", "simplejson", "urllib", "dpkt"], "dist_name": "MalDetec", "archs": ["armeabi-v7a"], "bootstrap": "sdl2"}
+{"recipes": ["hostpython2", "openssl", "sdl2_image", "sdl2_mixer", "sdl2_ttf", "python2", "sdl2", "setuptools", "six", "pyjnius", "pyopenssl", "requests", "kivy", "simplejson", "urllib", "dpkt", "plyer"], "dist_name": "MalDetec", "archs": ["armeabi-v7a"], "bootstrap": "sdl2"}

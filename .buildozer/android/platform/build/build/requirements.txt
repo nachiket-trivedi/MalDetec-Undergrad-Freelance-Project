@@ -1,3 +1,2 @@
-dpkt
-simplejson
+plyer
 urllib
