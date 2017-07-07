@@ -5,6 +5,7 @@ from kivy.uix.label import Label
 from kivy.uix.popup import Popup
 from kivy.uix.boxlayout import BoxLayout
 from plyer import notification
+from plyer import vibrator
 import dpkt
 import subprocess
 import os
@@ -24,6 +25,8 @@ class MalDetec(App):
 
     def main(self, event):
         self.label.text = "Process Started!"
+        notification.notify('Process Started','Results will be displayed soon')
+        vibrator.vibrate(0)
         if not os.path.exists('/storage/emulated/0/MalDetec'):
             os.makedirs('/storage/emulated/0/MalDetec/db')
             os.makedirs('/storage/emulated/0/MalDetec/files/dump')
@@ -39,10 +42,12 @@ class MalDetec(App):
                 os.makedirs('/storage/emulated/0/MalDetec/db')
                 hd=open('/storage/emulated/0/MalDetec/db/hotdata.txt','w')
                 hd.close()
-        hd1=open('/storage/emulated/0/MalDetec/db/scan_result.txt','w')
+        hd1=open('/storage/emulated/0/MalDetec/db/roughWork_scan.txt','w')
         hd1.close()
         hd1=open('/storage/emulated/0/MalDetec/db/forlaterscan_final.txt','w')
         hd1.close()
+        res=open('/storage/emulated/0/MalDetec/db/results.txt','w')
+        res.close()
         fork1=os.fork()
         if fork1==0:
             global Api_Key
@@ -57,7 +62,7 @@ class MalDetec(App):
             if fork2>0:
                 self.n1()
             elif fork2==0:
-                self.n2(**ar)
+                self.n2()
         elif fork1>0:
             global s3counter
             global fcounter
@@ -93,28 +98,15 @@ class MalDetec(App):
         App.get_running_app().stop()
 
     def stop(self, event):
-        # popup = Popup(title='Test popup',content=Label(text='Hello world'),size_hint=(None, None), size=(400, 400))
-        # popup.open()
-
-        p="hi af"
-        scn="lolumlol "+str(p)
-        pos="ashg "+str(p)+" kjaj "+str(p)
-        a=notification.notify(title=str(scn),message=str(pos),timeout=0)#notify-app with its url and positives
-        self.label.text = "Notification testing"
-        return
-        #notification.notify(title="si notification",message="si senora",timeout=5)
-        # app="com.facebook.katana"
-        # get_link="fgf.adg.json"
-        # Positives=11
-        # scn="URL scanned for "+str(app)
-        # pos="Positives found= "+str(Positives)+" | url: "+str(get_link)
-        # notification.notify(title=str(scn),message=str(pos),timeout=5)#notify-app with its url and positives
+        self.label.text = "Stopped"
 
     def n1(self):
         tLast=0
         pFinal=0
         s1_final=open("/storage/emulated/0/MalDetec/files/s1_final.txt","w")
+        s1_final.close()
         while True:
+            s1_final=open("/storage/emulated/0/MalDetec/files/s1_final.txt","a")
             files = [os.path.join('/storage/emulated/0/Android/data/jp.co.taosoftware.android.packetcapture/files/', x) for x in os.listdir('/storage/emulated/0/Android/data/jp.co.taosoftware.android.packetcapture/files/')]
             mxFile = max(files , key = os.path.getctime)
             f = open(mxFile,"r")
@@ -157,9 +149,10 @@ class MalDetec(App):
                         except Exception as e: #previously it was except (dpkt.dpkt.NeedData, dpkt.dpkt.UnpackError):
                             continue
             f.close()
+            s1_final.close()
         s1_final.close()
 
-    def n2(self,event):
+    def n2(self):
         fork3=os.fork()
         if fork3>0:#i=1;while true;i=$(($i+1)) to use if below one fails
             sh="""for i in `seq 1 100000`
@@ -171,10 +164,13 @@ class MalDetec(App):
             os.system(sh)
         elif fork3==0:
             s2_final=open("/storage/emulated/0/MalDetec/files/s2_final.txt","w")
+            s2_final.close()
             listt=set()
             time.sleep(2)
             inc=1
+            pp=" "
             while True:
+                s2_final=open("/storage/emulated/0/MalDetec/files/s2_final.txt","a")
                 time.sleep(1.2)
                 # files = [os.path.join('/storage/emulated/0/MalDetec/files/dump/', x) for x in os.listdir('/storage/emulated/0/MalDetec/files/dump/')]
                 # mxFile = max(files , key = os.path.getctime)
@@ -211,14 +207,7 @@ class MalDetec(App):
                             s2_final.write("\n")
                             break
                 f.close()
-                # popup = Popup(title='Test popup',content=Label(text='Hello world'),size_hint=(None, None), size=(400, 400))
-                # popup.open()
-                notification.notify(title="hey",message="you")
-                pp="usa"
-                scn="lolumlol "+str(pp)
-                pos="ashg "+str(pp)+" kjaj "+str(pp)
-                # self.stop()
-                # notification.notify(title=str(scn),message=str(pos),timeout=0)#notify-app with its url and positives
+                s2_final.close()
             s2_final.close()
 
     def merging_lookDB(self):
@@ -256,7 +245,8 @@ class MalDetec(App):
                 p2=words[0]
                 a2=words[1]
                 if p2 in pu11:
-                    ul=str(pu11[p2]).strip()
+                    # ul=str(pu11[p2]).strip()
+                    ul=str(''.join(str(pu11[p2]).split()))
                     s3_temp.write("time: "+t2+"\n"+"port: "+p2+"\n"+"app: "+a2+"\n"+"url: "+str(ul)+"\n\n")
         s2_f.close()
         s3_temp.close()
@@ -267,9 +257,9 @@ class MalDetec(App):
         s3_final.close()
         s3_temp.close()
         # DBlooking starts here
-        hdata=open('/storage/emulated/0/MalDetec/db/hotdata.txt','r')
         s3_final=open('/storage/emulated/0/MalDetec/files/s3_final.txt','r')
         fls_temp=open('/storage/emulated/0/MalDetec/db/forlaterscan_temp.txt','w')
+        results=open('/storage/emulated/0/MalDetec/db/results.txt','a')
         global s3counter
         i=0
         app=" "
@@ -283,24 +273,32 @@ class MalDetec(App):
             if len(words)==2 and words[0]=='app:':
                 app=str(words[1])
             elif len(words)==2 and words[0]=='url:':
-                url=str(words[1]).strip()
+                # url=str(words[1]).strip()
+                url=str(''.join(str(words[1]).split()))
                 found=0
                 wd=" "
+                hdata=open('/storage/emulated/0/MalDetec/db/hotdata.txt','r')
                 for liness in hdata.readlines():
                     word=liness.split()
                     if len(word)==2:
-                        wd=str(word[0]).strip()
+                        # wd=str(word[0]).strip()
+                        wd=str(''.join(str(word[0]).split()))
+                        fls_temp.write("\n****"+str(url)+"==="+str(wd)+"\n ")
                         if str(wd)==str(url):
                             found=1
-                            #fls_temp.write(str(app)+"****************** "+str(url)+"\n"+"\n")
-                            scn="From hotdata...URL scanned for "+str(app)
-                            pos="Positives found= "+str(word[1])+" for url= "+str(url)
-                            notification.notify(title=str(scn),message=str(pos),timeout=5)#notify-app with its url and positives
+                            # fls_temp.write(str(app)+"****************** "+str(url)+"\n"+"\n")
+                            results.write("App: "+str(app)+"\n"+"URL: "+str(url)+"\n"+"Positives: "+str(word[1])+"\n"+"\n")
+                            if os.fork()==0:
+                                scn="HData | App= "+str(app)
+                                pos="Positives= "+str(word[1])+" | url= "+str(url)
+                                notification.notify(title=str(scn),message=str(pos),timeout=1)#notify-app with its url and positives
+                            if os.fork()==0:
+                                vibrator.vibrate(0.2)
                             break
+                hdata.close()
                 if found==0:
                     fls_temp.write(str(app)+" "+str(url)+"\n"+"\n")
         s3counter=i
-        hdata.close()
         s3_final.close()
         fls_temp.close()
         fls_final=open('/storage/emulated/0/MalDetec/db/forlaterscan_final.txt','w')
@@ -309,14 +307,16 @@ class MalDetec(App):
             fls_final.write(str(line1))
         fls_final.close()
         fls_temp.close()
+        results.close()
 
     def scan(self):
         f=open('/storage/emulated/0/MalDetec/db/forlaterscan_final.txt','r')
-        scan_result=open('/storage/emulated/0/MalDetec/db/scan_result.txt','a')
+        roughWork_scan=open('/storage/emulated/0/MalDetec/db/roughWork_scan.txt','a')
         hdata=open('/storage/emulated/0/MalDetec/db/hotdata.txt','a')
+        results=open('/storage/emulated/0/MalDetec/db/results.txt','a')
         global fcounter
         i=0
-        scan_result.write("\n"+"*****Outermost Iteration****")
+        roughWork_scan.write("\n"+"*****Outermost Iteration****")
         app=" "
         get_link=" "
         for lines in f.readlines():
@@ -327,48 +327,49 @@ class MalDetec(App):
                 continue
             words=lines.split()
             if len(words)==2:
-                scan_result.write("\n"+"-----New url entry-----")
+                roughWork_scan.write("\n"+"-----New url entry-----")
                 app=str(words[0])
-                scan_result.write("\n"+"1 "+app)
-                get_link=str(words[1]).strip()
-                scan_result.write("\n"+"2 "+get_link)
+                roughWork_scan.write("\n"+"1 "+app)
+                # get_link=str(words[1]).strip()
+                get_link=str(''.join(str(words[1]).split()))
+                roughWork_scan.write("\n"+"2 "+get_link)
                 url = "https://www.virustotal.com/vtapi/v2/url/report"
-                scan_result.write("\n"+"3")
+                roughWork_scan.write("\n"+"3")
                 parameters = {"resource": get_link,"apikey": Api_Key}
-                scan_result.write("\n"+"4")
+                roughWork_scan.write("\n"+"4")
                 data = urllib.urlencode(parameters)
-                scan_result.write("\n"+"5")
+                roughWork_scan.write("\n"+"5")
                 req = urllib2.Request(url,data)
-                scan_result.write("\n"+"6")
+                roughWork_scan.write("\n"+"6")
                 try:
                     response = urllib2.urlopen(req)
-                    scan_result.write("\n"+"7")
+                    roughWork_scan.write("\n"+"7")
                 except urllib2.HTTPError, e:
-                    scan_result.write("\n"+"b")
+                    roughWork_scan.write("\n"+"b")
                     continue
                 except urllib2.URLError, e:
-                    scan_result.write("\n"+"c ")
-                    scan_result.write(str(e.reason))
+                    roughWork_scan.write("\n"+"c ")
+                    roughWork_scan.write(str(e.reason))
                     continue
                 except urllib2.HTTPException, e:
-                    scan_result.write("\n"+"d")
+                    roughWork_scan.write("\n"+"d")
                     continue
                 except Exception:
-                    scan_result.write("\n"+"other prob ")
+                    roughWork_scan.write("\n"+"other prob ")
                     continue
                 json = response.read()
                 if json is None:
-                    scan_result.write("\n"+" json failed ")
+                    roughWork_scan.write("\n"+" json failed ")
                     continue
-                scan_result.write("\n"+"8")
+                roughWork_scan.write("\n"+"8")
                 response_dict = simplejson.loads(json)
                 scan_id = response_dict.get("scan_id")
-                scan_result.write("\n"+"9")
+                roughWork_scan.write("\n"+"9")
                 link = response_dict.get("url")
                 response_code = response_dict.get("response_code")
-                scan_result.write("\n"+"10")
+                roughWork_scan.write("\n"+"10")
                 if response_code==0:
-                    scan_result.write("\n"+"RESPONSE_CODE_0")
+                    roughWork_scan.write("\n"+"RESPONSE_CODE_0")
                     continue
                 scan_date = response_dict.get("scan_date")
                 analysis = response_dict.get("permalink")
@@ -377,29 +378,34 @@ class MalDetec(App):
                 time.sleep(15)
                 if response_code==1:
                     hdata.write(str(get_link)+" "+str(Positives)+"\n"+"\n")
-                    scn="URL scanned for "+str(app)
-                    pos="Positives found= "+str(Positives)+" for url= "+str(get_link)
-                    notification.notify(title=str(scn),message=str(pos),timeout=5)
-                    scan_result.write("\nLink: "+link)
-                    scan_result.write("\nScan Date: "+scan_date)
-                    scan_result.write("\nScan report url: "+analysis)
-                    scan_result.write("\nScanner: "+str(total)+ " Scanner.")
-                    scan_result.write("\nPositives: "+str(Positives))
-                    scan_result.write("\n")
+                    results.write("App: "+str(app)+"\n"+"URL: "+str(get_link)+"\n"+"Positives: "+str(Positives)+"\n"+"\n")
+                    if os.fork()==0:
+                        vibrator.vibrate(0.2)
+                    if os.fork()==0:
+                        scn="Vtotal | App= "+str(app)
+                        pos="Positives= "+str(Positives)+" | url= "+str(get_link)
+                        notification.notify(title=str(scn),message=str(pos),timeout=5)
+                    roughWork_scan.write("\nLink: "+link)
+                    roughWork_scan.write("\nScan Date: "+scan_date)
+                    roughWork_scan.write("\nScan report url: "+analysis)
+                    roughWork_scan.write("\nScanner: "+str(total)+ " Scanner.")
+                    roughWork_scan.write("\nPositives: "+str(Positives))
+                    roughWork_scan.write("\n")
         f.close()
-        scan_result.close()
+        roughWork_scan.close()
         hdata.close()
         fcounter=i
+        results.close()
 
     # def scandummy(self):
     #     f=open('/storage/emulated/0/MalDetec/db/forlaterscan.txt','r')
-    #     scan_result=open('/storage/emulated/0/MalDetec/db/scan_result.txt','w')
+    #     roughWork_scan=open('/storage/emulated/0/MalDetec/db/roughWork_scan.txt','w')
     #     #hdata=open('/storage/emulated/0/MalDetec/db/hotdata.txt','w')
     #     count=1
     #     global lPointer
     #     global Api_Key
     #     for lines in f.readlines():
-    #         scan_result.write("\n"+str(lPointer)+"\n")
+    #         roughWork_scan.write("\n"+str(lPointer)+"\n")
     #         if count<=lPointer:
     #             count=count+1
     #             continue
@@ -424,37 +430,37 @@ class MalDetec(App):
     #             parameters = {"resource": get_link,"apikey": Api_Key}
     #             data = urllib.urlencode(parameters)
     #             req = urllib2.Request(url,data)
-    #             scan_result.write("\n"+str(get_link)+"\n")
+    #             roughWork_scan.write("\n"+str(get_link)+"\n")
     #             #os.environ['http_proxy']=''
     #             try:
     #                 response = urllib2.urlopen(req,timeout=3)
-    #                 #scan_result.write("a")
+    #                 #roughWork_scan.write("a")
     #             except urllib2.HTTPError, e:
-    #                 scan_result.write("b")
+    #                 roughWork_scan.write("b")
     #                 continue
     #             except urllib2.URLError, e:
-    #                 scan_result.write("c ")
-    #                 scan_result.write(str(e.reason))
+    #                 roughWork_scan.write("c ")
+    #                 roughWork_scan.write(str(e.reason))
     #                 continue
     #             except urllib2.HTTPException, e:
-    #                 scan_result.write("d")
+    #                 roughWork_scan.write("d")
     #                 continue
     #             except:
-    #                 scan_result.write(" oops ")
+    #                 roughWork_scan.write(" oops ")
     #                 continue
     #             json = response.read()
     #             # if json==None:
-    #             #     scan_result.write("@@@@@@@")
+    #             #     roughWork_scan.write("@@@@@@@")
     #             #     continue
-    #             scan_result.write(str(json))
+    #             roughWork_scan.write(str(json))
     #             response_dict = simplejson.loads(json)
     #             scan_id = response_dict.get("scan_id")
-    #             #scan_result.write("\nsc_id"+scan_id+"\n")
+    #             #roughWork_scan.write("\nsc_id"+scan_id+"\n")
     #             link = response_dict.get("url")
     #             response_code = response_dict.get("response_code")
-    #             #scan_result.write("\nrcode"+response_code+"\n")
+    #             #roughWork_scan.write("\nrcode"+response_code+"\n")
     #             if response_code==0:
-    #                 scan_result.write("\nRESPONSE_CODE_0)\n")
+    #                 roughWork_scan.write("\nRESPONSE_CODE_0)\n")
     #                 continue
     #             scan_date = response_dict.get("scan_date")
     #             analysis = response_dict.get("permalink")
@@ -464,19 +470,19 @@ class MalDetec(App):
     #             if response_code==1:
     #                 ulist.add(str(get_link))
     #                 scanResult[get_link]="Positives: "+str(Positives)
-    #                 scan_result.write("\nLink: "+link)
-    #                 scan_result.write("\nScan Date: "+scan_date)
-    #                 scan_result.write("\nScan report url: "+analysis)
-    #                 scan_result.write("\nScanner: "+str(total)+ " Scanner.")
-    #                 scan_result.write("\nPositives: "+str(Positives))
-    #                 scan_result.write("\n")
+    #                 roughWork_scan.write("\nLink: "+link)
+    #                 roughWork_scan.write("\nScan Date: "+scan_date)
+    #                 roughWork_scan.write("\nScan report url: "+analysis)
+    #                 roughWork_scan.write("\nScanner: "+str(total)+ " Scanner.")
+    #                 roughWork_scan.write("\nPositives: "+str(Positives))
+    #                 roughWork_scan.write("\n")
     #                 for items in ulist:
-    #                     scan_result.write("\n% "+str(items))
+    #                     roughWork_scan.write("\n% "+str(items))
     #     for items in ulist:
-    #         scan_result.write("\n$ "+str(items))
+    #         roughWork_scan.write("\n$ "+str(items))
     #     for items in ulist:
-    #         scan_result.write("\n@ "+str(items)+" "+str(scanResult[items]))
+    #         roughWork_scan.write("\n@ "+str(items)+" "+str(scanResult[items]))
     #     f.close()
-    #     scan_result.close()
+    #     roughWork_scan.close()
 
 MalDetec().run()

@@ -86,6 +86,7 @@ fullscreen = 0
 
 # (list) Permissions
 android.permissions = INTERNET
+android.permissions = VIBRATE
 #android.permissions = DUMP
 
 # (int) Android API to use

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MalDetec</string>
-    <string name="private_version">1499376687.13</string>
+    <string name="private_version">1499461454.35</string>
     <string name="presplash_color">#000000</string>
     <string name="urlScheme">kivy</string>
 </resources>
