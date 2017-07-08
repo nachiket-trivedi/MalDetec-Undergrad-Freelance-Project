@@ -77,7 +77,10 @@ class MalDetec(App):
             fork5=os.fork()
             if fork5==0:
                 time.sleep(180)
-                self.scan()
+                # self.scan()
+                for i in range(1,1000):
+                    self.scan()
+                    time.sleep(30)
 
     def build(self):
         layout = BoxLayout(orientation='vertical')
@@ -258,17 +261,17 @@ class MalDetec(App):
         s3_temp.close()
         # DBlooking starts here
         s3_final=open('/storage/emulated/0/MalDetec/files/s3_final.txt','r')
-        fls_temp=open('/storage/emulated/0/MalDetec/db/forlaterscan_temp.txt','w')
+        fls_final=open('/storage/emulated/0/MalDetec/db/forlaterscan_final.txt','a')
         results=open('/storage/emulated/0/MalDetec/db/results.txt','a')
         global s3counter
         i=0
         app=" "
         url=" "
         for lines in s3_final.readlines():
-            #fls_temp.write("-*"+str(i)+"\n")
+            #fls_final.write("-*"+str(i)+"\n")
             i=i+1
-            # if int(i)<=int(s3counter):
-            #     continue
+            if int(i)<=int(s3counter):
+                continue
             words=lines.split()
             if len(words)==2 and words[0]=='app:':
                 app=str(words[1])
@@ -283,10 +286,10 @@ class MalDetec(App):
                     if len(word)==2:
                         # wd=str(word[0]).strip()
                         wd=str(''.join(str(word[0]).split()))
-                        # fls_temp.write("\n****"+str(url)+"==="+str(wd)+"\n ")
+                        # fls_final.write("\n****"+str(url)+"==="+str(wd)+"\n ")
                         if str(wd)==str(url):
                             found=1
-                            # fls_temp.write(str(app)+"****************** "+str(url)+"\n"+"\n")
+                            # fls_final.write(str(app)+"****************** "+str(url)+"\n"+"\n")
                             results.write("App: "+str(app)+"\n"+"URL: "+str(url)+"\n"+"Positives: "+str(word[1])+"\n"+"\n")
                             if os.fork()==0:
                                 scn="HData | App= "+str(app)
@@ -297,16 +300,10 @@ class MalDetec(App):
                             break
                 hdata.close()
                 if found==0:
-                    fls_temp.write(str(app)+" "+str(url)+"\n"+"\n")
+                    fls_final.write(str(app)+" "+str(url)+"\n"+"\n")
         s3counter=i
         s3_final.close()
-        fls_temp.close()
-        fls_final=open('/storage/emulated/0/MalDetec/db/forlaterscan_final.txt','w')
-        fls_temp=open('/storage/emulated/0/MalDetec/db/forlaterscan_temp.txt','r')
-        for line1 in fls_temp.readlines():
-            fls_final.write(str(line1))
         fls_final.close()
-        fls_temp.close()
         results.close()
 
     def scan(self):
