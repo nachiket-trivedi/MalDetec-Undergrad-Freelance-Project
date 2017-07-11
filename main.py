@@ -26,7 +26,7 @@ class MalDetec(App):
     def main(self, event):
         self.label.text = "Process Started!"
         notification.notify('Process Started','Results will be displayed soon')
-        vibrator.vibrate(0)
+        vibrator.vibrate(0.2)
         if not os.path.exists('/storage/emulated/0/MalDetec'):
             os.makedirs('/storage/emulated/0/MalDetec/db')
             os.makedirs('/storage/emulated/0/MalDetec/files/dump')
@@ -76,11 +76,11 @@ class MalDetec(App):
                     time.sleep(3)
             fork5=os.fork()
             if fork5==0:
-                time.sleep(180)
+                time.sleep(40)
                 # self.scan()
                 for i in range(1,1000):
                     self.scan()
-                    time.sleep(30)
+                    time.sleep(6)
 
     def build(self):
         layout = BoxLayout(orientation='vertical')
@@ -313,12 +313,12 @@ class MalDetec(App):
         results=open('/storage/emulated/0/MalDetec/db/results.txt','a')
         global fcounter
         i=0
-        roughWork_scan.write("\n"+"*****Outermost Iteration****")
+        roughWork_scan.write("\n"+"#*****Outermost Iteration*****#")
         app=" "
         get_link=" "
         for lines in f.readlines():
-            global Api_Key
             Api_Key = "17c467e4ef26c07369d5c021afbdba97de192970c2f559632d29acd6a3c23ed5"
+            # Api_Key="8e424e0d9c44757d39b95441fca4d21a8e1e452ac70090e3264f9265d23d5775"
             i=i+1
             if int(i)<=int(fcounter):
                 continue
@@ -327,12 +327,11 @@ class MalDetec(App):
                 roughWork_scan.write("\n"+"-----New url entry-----")
                 app=str(words[0])
                 roughWork_scan.write("\n"+"1 "+app)
-                # get_link=str(words[1]).strip()
                 get_link=str(''.join(str(words[1]).split()))
                 roughWork_scan.write("\n"+"2 "+get_link)
                 url = "https://www.virustotal.com/vtapi/v2/url/report"
                 roughWork_scan.write("\n"+"3")
-                parameters = {"resource": get_link,"apikey": Api_Key}
+                parameters = {"resource": get_link,"apikey": Api_Key,"scan" : 1}
                 roughWork_scan.write("\n"+"4")
                 data = urllib.urlencode(parameters)
                 roughWork_scan.write("\n"+"5")
@@ -351,15 +350,15 @@ class MalDetec(App):
                 except urllib2.HTTPException, e:
                     roughWork_scan.write("\n"+"d")
                     continue
-                except Exception:
-                    roughWork_scan.write("\n"+"other prob ")
-                    continue
                 json = response.read()
                 if json is None:
                     roughWork_scan.write("\n"+" json failed ")
                     continue
-                roughWork_scan.write("\n"+"8")
-                response_dict = simplejson.loads(json)
+                roughWork_scan  .write("\n"+"8")#+" "+json)
+                try:
+                    response_dict = simplejson.loads(json)
+                except:
+                    continue
                 scan_id = response_dict.get("scan_id")
                 roughWork_scan.write("\n"+"9")
                 link = response_dict.get("url")
@@ -372,8 +371,8 @@ class MalDetec(App):
                 analysis = response_dict.get("permalink")
                 Positives = response_dict.get("positives")
                 total = response_dict.get("total")
-                time.sleep(15)
                 if response_code==1:
+                    time.sleep(15)
                     hdata.write(str(get_link)+" "+str(Positives)+"\n"+"\n")
                     results.write("App: "+str(app)+"\n"+"URL: "+str(get_link)+"\n"+"Positives: "+str(Positives)+"\n"+"\n")
                     if os.fork()==0:

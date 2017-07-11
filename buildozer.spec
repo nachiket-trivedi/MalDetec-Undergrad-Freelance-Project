@@ -85,9 +85,7 @@ fullscreen = 0
 #android.presplash_color = #FFFFFF
 
 # (list) Permissions
-android.permissions = INTERNET
-android.permissions = VIBRATE
-#android.permissions = DUMP
+android.permissions = INTERNET, VIBRATE
 
 # (int) Android API to use
 #android.api = 19
