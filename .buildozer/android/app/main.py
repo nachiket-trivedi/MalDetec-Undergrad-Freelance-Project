@@ -2,7 +2,6 @@
 from kivy.app import App
 from kivy.uix.button import Button
 from kivy.uix.label import Label
-from kivy.uix.popup import Popup
 from kivy.uix.boxlayout import BoxLayout
 from plyer import notification
 from plyer import vibrator
@@ -116,18 +115,20 @@ class MalDetec(App):
             pcap = dpkt.pcap.Reader(f)
             lst=set()
             for ts, buf in pcap:
-                if pcap.datalink() == dpkt.pcap.DLT_EN10MB :
-                    eth = dpkt.ethernet.Ethernet(buf)
-                else:
-                    eth = dpkt.sll.SLL(raw_pkt)
-                if eth.type!=2048 or eth.type!=dpkt.ethernet.ETH_TYPE_IP: #For ipv4, dpkt.ethernet.Ethernet(buf).type =2048
-                    continue
+                # if pcap.datalink() == dpkt.pcap.DLT_EN10MB :
+                #     eth = dpkt.ethernet.Ethernet(buf)
+                # else:
+                #     eth = dpkt.sll.SLL(raw_pkt)
+                # if eth.type!=2048 or eth.type!=dpkt.ethernet.ETH_TYPE_IP: #For ipv4, dpkt.ethernet.Ethernet(buf).type =2048
+                #     continue
+                eth = dpkt.ethernet.Ethernet(buf)
                 ip=eth.data
-                if ip.p!=6 or ip.p not in (dpkt.ip.IP_PROTO_TCP, dpkt.ip.IP_PROTO_UDP):
-                    continue
+                # if ip.p!=6 or ip.p not in (dpkt.ip.IP_PROTO_TCP, dpkt.ip.IP_PROTO_UDP):
+                #     continue
                 tcp=ip.data
                 if type(tcp)!=str: #tcp.__class__.__name__ == 'TCP' can be added here
-                    if (tcp.dport == 80 or tcp.dport == 443) and len(tcp.data) > 0:# u can add tcp port 8080 here
+                # if (tcp.dport == 80 or tcp.dport == 443) and len(tcp.data) > 0:# u can add tcp port 8080 here
+                    if tcp.dport == 80 and len(tcp.data) > 0:# u can add tcp port 8080 here
                         try:
                             http1 = dpkt.http.Request(tcp.data)
                             if http1.uri!='/_ping':
@@ -162,6 +163,7 @@ class MalDetec(App):
             do
             date +%s > /storage/emulated/0/MalDetec/files/dump/netdump$i.txt
             cat /proc/net/tcp6 >> /storage/emulated/0/MalDetec/files/dump/netdump$i.txt #what happens when its tcp
+            cat /proc/net/tcp >> /storage/emulated/0/MalDetec/files/dump/netdump$i.txt #what happens when its tcp
             sleep 1
             done"""
             os.system(sh)
@@ -201,13 +203,17 @@ class MalDetec(App):
                             if str(word)=='9999' or str(word)=='0' or str(word)=='1000' or str(word)=='1001':
                                 s2_final.write("\n")
                                 continue
-                            wrd=os.popen("cat /storage/emulated/0/MalDetec/uid_pkg_map.txt | grep -A1 userId='%s'"%word).read()
-                            wrd1=wrd.split("\n")
-                            p=str(wrd1[1])
-                            p=p[8:-2]
-                            p=p.split()[1]
-                            s2_final.write(str(p))
-                            s2_final.write("\n")
+                            try:
+                                wrd=os.popen("cat /storage/emulated/0/MalDetec/uid_pkg_map.txt | grep -A1 userId='%s'"%word).read()
+                                wrd1=wrd.split("\n")
+                                p=str(wrd1[1])
+                                p=p[8:-2]
+                                p=p.split()[1]
+                                s2_final.write(str(p))
+                                s2_final.write("\n")
+                            except:
+                                s2_final.write(str(word))
+                                s2_final.write("\n")
                             break
                 f.close()
                 s2_final.close()
@@ -294,7 +300,10 @@ class MalDetec(App):
                             if os.fork()==0:
                                 scn="HData | App= "+str(app)
                                 pos="Positives= "+str(word[1])+" | url= "+str(url)
-                                notification.notify(title=str(scn),message=str(pos),timeout=1)#notify-app with its url and positives
+                                if int(word[1])>=1:
+                                    notification.notify(title="WARNING! "+str(scn),message=str(pos),timeout=1)#notify-app with its url and positives
+                                else:
+                                    notification.notify(title=str(scn),message=str(pos),timeout=1)#notify-app with its url and positives
                             if os.fork()==0:
                                 vibrator.vibrate(0.2)
                             break
@@ -318,7 +327,7 @@ class MalDetec(App):
         get_link=" "
         for lines in f.readlines():
             Api_Key = "17c467e4ef26c07369d5c021afbdba97de192970c2f559632d29acd6a3c23ed5"
-            # Api_Key="8e424e0d9c44757d39b95441fca4d21a8e1e452ac70090e3264f9265d23d5775"
+            # Api_Key="8e424e0d9c44757d39b95441fca4d21a8e1e452ac70090e3264f9265d23d5775" hvt's key
             i=i+1
             if int(i)<=int(fcounter):
                 continue
@@ -380,7 +389,10 @@ class MalDetec(App):
                     if os.fork()==0:
                         scn="Vtotal | App= "+str(app)
                         pos="Positives= "+str(Positives)+" | url= "+str(get_link)
-                        notification.notify(title=str(scn),message=str(pos),timeout=5)
+                        if int(Positives)>=1:
+                            notification.notify(title="WARNING! "+str(scn),message=str(pos),timeout=1)
+                        else:
+                            notification.notify(title=str(scn),message=str(pos),timeout=1)
                     roughWork_scan.write("\nLink: "+link)
                     roughWork_scan.write("\nScan Date: "+scan_date)
                     roughWork_scan.write("\nScan report url: "+analysis)
